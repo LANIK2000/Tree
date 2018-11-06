@@ -60,18 +60,14 @@ namespace tree
         {
             if (this.Num < getNum)
             {
-                if (this.rChild == null)
-                    { /*Do nothing*/ }
-                else if(this.rChild.Num==getNum)
+                if(this.rChild.Num==getNum)
                     { this.rChild = null;}
                 else
                     { this.rChild.Delete(getNum); }
             }
             else
             {
-                if (this.lChild == null)
-                    { /*Do nothing*/ }
-                else if (this.lChild.Num == getNum)
+                if (this.lChild.Num == getNum)
                     { this.lChild = null; }
                 else
                     { this.lChild.Delete(getNum); }
