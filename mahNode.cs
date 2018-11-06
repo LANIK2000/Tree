@@ -60,17 +60,19 @@ namespace tree
         {
             if (this.Num < getNum)
             {
-                if(this.rChild.Num==getNum)
-                    { this.rChild = null;}
-                else
-                    { this.rChild.Delete(getNum); }
+                if (this.rChild != null)
+                    if(this.rChild.Num==getNum)
+                        { this.rChild = null;}
+                    else
+                        { this.rChild.Delete(getNum); }
             }
             else
             {
-                if (this.lChild.Num == getNum)
-                    { this.lChild = null; }
-                else
-                    { this.lChild.Delete(getNum); }
+                if (this.lChild != null)
+                    if (this.lChild.Num == getNum)
+                        { this.lChild = null; }
+                    else
+                        { this.lChild.Delete(getNum); }
             }
         }
     }
