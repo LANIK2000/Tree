@@ -18,16 +18,14 @@ namespace tree
 
         public void Insert(int getNum)
         {
-            if (this.Num == getNum)
-                { /*Do nothing*/ }
-            else if (this.Num < getNum)
+            if (this.Num < getNum)
             {
                 if (this.rChild == null)
                     { this.rChild = new mahNode(getNum); }
                 else
                     { this.rChild.Insert(getNum); }
             }
-            else
+            else if (this.Num > getNum)
             {
                 if (this.lChild == null)
                     { this.lChild = new mahNode(getNum); }
