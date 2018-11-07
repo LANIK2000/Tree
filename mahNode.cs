@@ -64,7 +64,7 @@ namespace tree
                     else
                         { this.rChild.Delete(getNum); }
             }
-            else
+            else if (this.Num > getNum)
             {
                 if (this.lChild != null)
                     if (this.lChild.Num == getNum)
